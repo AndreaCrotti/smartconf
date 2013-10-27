@@ -136,4 +136,5 @@ class TestConfiguration(unittest.TestCase):
                                         'passwd': 'realpwd',
                                         'port': '3306',
                                         'user': 'user'}}
+
             self.assertEqual(res, desired)

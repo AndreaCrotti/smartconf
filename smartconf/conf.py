@@ -12,7 +12,6 @@ from inspect import getmembers
 from ConfigParser import ConfigParser
 
 KEY_VAL_SEP = ':'
-
 GLOBAL_CONF = None
 
 logger = logging.getLogger(__name__)
@@ -48,6 +47,7 @@ def load_conf(conf_module, ini_conf=None, extra=None):
 
     return conf
 
+
 # TODO: use this function to refactor the Conf class
 def config_parser_to_dict(conf_file):
     """Take a ConfigParser object that has already parsed a file and
@@ -66,7 +66,7 @@ def config_parser_to_dict(conf_file):
     return conf_dict
 
 
-class Conf:
+class Conf(object):
     def __init__(self, conf_file=None, default=None):
         self.conf = ConfigParser()
         self.conf_dict = default or {}
