@@ -3,7 +3,7 @@ import sys
 
 from os import remove, path
 
-from smartconf import conf, TempFile
+from smartconf import TempFile, conf
 
 CUR_DIR = path.dirname(__file__)
 
