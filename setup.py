@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-package = 'Smartconf'
+package = 'smartconf'
 version = '0.1'
 
 setup(name=package,

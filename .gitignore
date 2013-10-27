@@ -1,3 +1,4 @@
 *.pyc
 /smartconf/.dir-locals.el
 .tox
+/smartconf.egg-info
