@@ -1,3 +1,0 @@
-"!https://travis-ci.org/AndreaCrotti/smartconf":https://travis-ci.org/AndreaCrotti/smartconf
-
-Simple wrapper around ConfigParser to make it easy to create extendable command line configurations.
