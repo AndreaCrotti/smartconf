@@ -10,7 +10,10 @@ from importlib import import_module
 from inspect import getmembers
 from pprint import pformat
 
-from ConfigParser import ConfigParser
+try:
+    from configparser import ConfigParser
+except ImportError:
+    from ConfigParser import ConfigParser
 
 KEY_VAL_SEP = ':'
 GLOBAL_CONF = None
@@ -151,7 +154,7 @@ def dict_to_args(d, prefix=()):
     Depth first visit of the dictionary yielding a value when reaching
     the leaf.
     """
-    for k, v in d.iteritems():
+    for k, v in d.items():
         if isinstance(v, dict):
             for x in dict_to_args(v, prefix + (k,)):
                 yield x

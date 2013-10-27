@@ -45,7 +45,8 @@ def setUpModule():
     global TMP_SAMPLE_DEFAULTS
     TMP_SAMPLE_DEFAULTS = path.join(CUR_DIR, 'temp_defaults.py')
     sys.path.insert(0, CUR_DIR)
-    open(TMP_SAMPLE_DEFAULTS, 'w').write(SAMPLE_DEFAULTS)
+    with open(TMP_SAMPLE_DEFAULTS, 'w') as wr:
+        wr.write(SAMPLE_DEFAULTS)
 
 
 def tearDownModule():
