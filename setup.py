@@ -11,7 +11,7 @@ setup(name=package,
       version=version,
       description="Simple wrapper around ConfigParser",
       classifiers=[
-          "Development Status :: 4 Beta",
+          "Development Status :: 4 - Beta",
           "Topic :: Utilities",
           "License :: OSI Approved :: BSD License",
       ]
