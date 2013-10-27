@@ -8,6 +8,7 @@ import logging
 
 from importlib import import_module
 from inspect import getmembers
+from pprint import pformat
 
 from ConfigParser import ConfigParser
 
@@ -87,6 +88,12 @@ class Conf(object):
                     self.conf_dict[sec][k] = _convert_to_type(old, v)
                 else:
                     self.conf_dict[sec][k] = v
+
+    def __repr__(self):
+        return str(self)
+
+    def __str__(self):
+        return pformat(self.conf_dict)
 
     def __contains__(self, attr):
         return attr in self.conf_dict
